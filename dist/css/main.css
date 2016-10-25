@@ -1,0 +1,115 @@
+p {
+  color: red; }
+
+label {
+  width: 100%; }
+
+ul {
+  padding-left: 0px; }
+
+li {
+  list-style: none; }
+
+.editEvent {
+  background-color: #b7f1b3; }
+
+#event-form {
+  display: none; }
+
+span {
+  width: 120px;
+  display: inline-block; }
+
+input {
+  width: 70%; }
+
+.datetime {
+  width: 70%; }
+
+input[type="button"] {
+  width: 100px; }
+
+input[type="submit"] {
+  width: 100px; }
+
+#tabs {
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+.main-content {
+  background-color: #9cd5f1; }
+
+.content-container {
+  margin-bottom: 10px; }
+
+#event-type {
+  width: 70%; }
+
+.bottom-content {
+  height: 300px;
+  overflow-y: auto; }
+
+#events-container {
+  display: none; }
+
+.required:invalid {
+  color: red; }
+
+.required:after {
+  content: '*';
+  color: red; }
+
+.required-message {
+  display: none;
+  margin-left: 125px;
+  color: red; }
+
+.password-message {
+  display: none;
+  margin-left: 125px;
+  color: red; }
+
+.startdate-message {
+  display: none;
+  margin-left: 125px;
+  color: red; }
+
+.enddate-message {
+  display: none;
+  margin-left: 125px;
+  color: red; }
+
+#indicates-required {
+  font-size: 12px;
+  height: 40px; }
+
+#indicates-required span {
+  color: red;
+  width: 5px; }
+
+#new-event {
+  margin-bottom: 10px; }
+
+@media (max-width: 1024px) {
+  #event-type {
+    width: 100%; }
+  input {
+    width: 100%; }
+  .datetime {
+    width: 100%; }
+  .required-message {
+    margin-left: 0px; }
+  .password-message {
+    margin-left: 0px; } }
+
+@media (max-width: 768px) {
+  input[type="text"] {
+    width: 100%; }
+  input[type="email"] {
+    width: 100%; }
+  input[type="password"] {
+    width: 100%; }
+  .required-message {
+    margin-left: 0px; }
+  .password-message {
+    margin-left: 0px; } }

@@ -296,7 +296,8 @@ $(function(){
 			'focusout .daterequired': 'onDateLeaveFocus',
 			'focusout #event-start': 'validateStartDate', 
 			'keyup #event-start': 'validateStartDate',
-			'focusout #event-end': 'validateEndDate'
+			'focusout #event-end': 'validateEndDate',
+			'keyup #event-end': 'validateEndDate'
 		},
 
 		onNewEvent: function() {
@@ -426,6 +427,8 @@ $(function(){
 		validateStartDate: function(event) {
 			var today = new Date();
 			var startdate = new Date(event.target.value);
+			var n = startdate.getTimezoneOffset();
+			startdate.setHours(startdate.getHours() + (n/60));
 			if (today > startdate) {
 				$('.startdate-message2').show();
 				$('#event-start').focus();
@@ -540,6 +543,3 @@ $(function(){
 
 
 });
-
-
-

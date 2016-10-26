@@ -74,6 +74,11 @@ input[type="submit"] {
   margin-left: 125px;
   color: red; }
 
+.startdate-message2 {
+  display: none;
+  margin-left: 125px;
+  color: red; }
+
 .enddate-message {
   display: none;
   margin-left: 125px;
@@ -100,6 +105,12 @@ input[type="submit"] {
   .required-message {
     margin-left: 0px; }
   .password-message {
+    margin-left: 0px; }
+  .startdate-message {
+    margin-left: 0px; }
+  .enddate-message {
+    margin-left: 0px; }
+  .startdate-message2 {
     margin-left: 0px; } }
 
 @media (max-width: 768px) {
@@ -112,4 +123,10 @@ input[type="submit"] {
   .required-message {
     margin-left: 0px; }
   .password-message {
+    margin-left: 0px; }
+  .startdate-message {
+    margin-left: 0px; }
+  .enddate-message {
+    margin-left: 0px; }
+  .startdate-message2 {
     margin-left: 0px; } }

@@ -295,6 +295,7 @@ $(function(){
 			'focusout .required': 'onLeaveFocus',
 			'focusout .daterequired': 'onDateLeaveFocus',
 			'focusout #event-start': 'validateStartDate', 
+			'keyup #event-start': 'validateStartDate',
 			'focusout #event-end': 'validateEndDate'
 		},
 
@@ -423,6 +424,15 @@ $(function(){
 		},		
 
 		validateStartDate: function(event) {
+			var today = new Date();
+			var startdate = new Date(event.target.value);
+			if (today > startdate) {
+				$('.startdate-message2').show();
+				$('#event-start').focus();
+			}	
+			else
+				$('.startdate-message2').hide();
+
 			if (event.target.value != '' && $('#event-end').val() != '') {
 				var startdate = new Date(event.target.value);
 				var enddate = new Date($('#event-end').val());
@@ -430,8 +440,9 @@ $(function(){
 					$('.startdate-message').show();
 					$('#event-start').focus();
 				}
-				else
+				else {
 					$('.startdate-message').hide();
+				}
 			}
 			else
 				$('.startdate-message').hide();
